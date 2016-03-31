@@ -1,7 +1,5 @@
 package com.aberlin.blog;
 
-import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
 public interface PostSubscriber {
@@ -12,5 +10,5 @@ public interface PostSubscriber {
 
     void postIsInvalid(List<ValidationError> errors);
 
-    ResponseEntity getResponse();
+    <T> T getResponse();
 }
