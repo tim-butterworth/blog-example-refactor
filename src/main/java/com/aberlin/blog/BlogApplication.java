@@ -17,12 +17,12 @@ public class BlogApplication {
         validAuthors.add("someauthor");
     }
 
-    public PostSubscriber createPost(String title, String contents, String author, PostSubscriber postSubscriber) {
+    public <T> PostSubscriber<T> createPost(String title, String contents, String author, PostSubscriber<T> postSubscriber) {
         Post post = new Post(title, contents, author);
 
         List<ValidationError> validationErrors = validatePost(post);
 
-        if ( ! validationErrors.isEmpty()) {
+        if (!validationErrors.isEmpty()) {
             postSubscriber.postIsInvalid(validationErrors);
             return postSubscriber;
         }
@@ -39,7 +39,7 @@ public class BlogApplication {
     public List<PostData> getPosts() {
         List<Post> allPosts = this.postRepository.findAllPosts();
 
-        return allPosts.stream().map(post -> transform(post))
+        return allPosts.stream().map(this::transform)
                 .collect(Collectors.toList());
     }
 

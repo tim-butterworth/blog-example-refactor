@@ -2,7 +2,7 @@ package com.aberlin.blog;
 
 import java.util.List;
 
-public interface PostSubscriber {
+public interface PostSubscriber <T> {
 
     void postCreated(Post any);
 
@@ -10,5 +10,5 @@ public interface PostSubscriber {
 
     void postIsInvalid(List<ValidationError> errors);
 
-    <T> T getResponse();
+    T getResponse();
 }

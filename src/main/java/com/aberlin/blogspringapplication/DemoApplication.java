@@ -7,7 +7,7 @@ import com.aberlin.blogspringapplication.blogjpa.JpaCommentRepository;
 import com.aberlin.blogspringapplication.blogjpa.JpaPostRepository;
 import com.aberlin.blogspringapplication.blogjpa.JpaWrapperCommentRepository;
 import com.aberlin.blogspringapplication.blogjpa.JpaWrapperPostRepository;
-import com.aberlin.blogspringapplication.blogjsonapi.ResponseBuilderFactory;
+import com.aberlin.blog.ResponseBuilderFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

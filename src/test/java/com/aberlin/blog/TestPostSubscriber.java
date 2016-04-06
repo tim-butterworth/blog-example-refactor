@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public class TestPostSubscriber implements PostSubscriber {
+public class TestPostSubscriber implements PostSubscriber<ResponseEntity> {
     Post createdPost;
 
     @Override

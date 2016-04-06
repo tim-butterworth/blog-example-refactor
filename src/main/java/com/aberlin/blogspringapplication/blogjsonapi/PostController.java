@@ -1,15 +1,13 @@
 package com.aberlin.blogspringapplication.blogjsonapi;
 
-import com.aberlin.blog.BlogApplication;
+import com.aberlin.blog.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
-import java.net.MalformedURLException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
